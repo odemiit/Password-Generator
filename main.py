@@ -39,34 +39,26 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Hard Level - Order of characters randomized:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-#get a random letter from the list "letters" for how many letters wanted and append it to the letters section of the password
-pass_letters = []
+#get a random letter from the list "letters" for how many letters wanted and append it to the password list
+password_list = []
 for letter in range(1, nr_letters + 1):
-  letter = random.choice(letters)
-  pass_letters.append(letter)
+  password_list += random.choice(letters)
 
-#get a random letter from the list "letters" for how many symbols wanted and append it to the symbols section of the password
-pass_symbols = []
+#get a random letter from the list "letters" for how many symbols wanted and append it to the password list
 for symbol in range(1, nr_symbols + 1):
-    symbol = random.choice(symbols)
-    pass_symbols.append(symbol)
+  password_list += random.choice(symbols)
 
-#get a random number from the list "letters" for how many letters wanted and append it to the numbers section of the password
-pass_numbers = []
+#get a random number from the list "letters" for how many letters wanted and append it to the password list
 for number in range(1, nr_numbers + 1):
-      number = random.choice(numbers)
-      pass_numbers.append(number)
-
-#combine all the lists together
-combined_chars = pass_letters + pass_symbols + pass_numbers
+  password_list += random.choice(numbers)
 
 #randomly shuffle the characters in the list
-combined_chars = random.sample(combined_chars, len(combined_chars))
+password_list = random.sample(password_list, len(password_list))
 
 #convert the list into a string
 final_password = ""
 
-for character in combined_chars:
+for character in password_list:
   final_password += character
 
 #print out final password
