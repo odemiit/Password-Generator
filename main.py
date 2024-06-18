@@ -63,3 +63,12 @@ combined_chars = pass_letters + pass_symbols + pass_numbers
 #randomly shuffle the characters in the list
 combined_chars = random.sample(combined_chars, len(combined_chars))
 
+#convert the list into a string
+final_password = ""
+
+for character in combined_chars:
+  final_password += character
+
+#print out final password
+print(f"Here is your password: {final_password}")
+
