@@ -12,6 +12,12 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
+#get a random letter from the list "letters" for how many letters wanted and append in to letters section of the password
+pass_letters = ""
+for letter in range(1, nr_letters + 1):
+  letter = random.choice(letters)
+  pass_letters += letter
+
 
 #Hard Level - Order of characters randomized:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
