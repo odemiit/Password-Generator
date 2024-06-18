@@ -60,3 +60,6 @@ for number in range(1, nr_numbers + 1):
 #combine all the lists together
 combined_chars = pass_letters + pass_symbols + pass_numbers
 
+#randomly shuffle the characters in the list
+combined_chars = random.sample(combined_chars, len(combined_chars))
+
