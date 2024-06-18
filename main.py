@@ -30,5 +30,11 @@ for number in range(1, nr_numbers + 1):
       number = random.choice(numbers)
       pass_numbers += number
 
+#combine all the generated sections in one string
+total_password = pass_letters + pass_symbols + pass_numbers
+
+#print out password
+print(f"Here is your password: {total_password}")
+
 #Hard Level - Order of characters randomized:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
