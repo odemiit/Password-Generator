@@ -56,3 +56,7 @@ pass_numbers = []
 for number in range(1, nr_numbers + 1):
       number = random.choice(numbers)
       pass_numbers.append(number)
+
+#combine all the lists together
+combined_chars = pass_letters + pass_symbols + pass_numbers
+
